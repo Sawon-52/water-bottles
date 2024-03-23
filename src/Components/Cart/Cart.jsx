@@ -1,11 +1,14 @@
 import "./Cart.css";
 export const Cart = ({ cart }) => {
-  console.log(cart);
+  // console.log(cart?.img);
   return (
     <div className="cart">
-      {cart?.map((bottle) => (
-        <img src={bottle.img} alt="img" />
-      ))}
+      <h2>My Cart</h2>
+      <div>
+        {cart?.map((bottle) => (
+          <img src={bottle?.img} alt="img" />
+        ))}
+      </div>
     </div>
   );
 };

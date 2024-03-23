@@ -1,8 +1,12 @@
-.card {
+.cart {
+  max-width: 100%;
+  min-height: 300px;
   padding: 10px;
-  border: 2px solid white;
+  background: rgb(83, 82, 82);
+  border-radius: 15px;
+  margin: 20px 0;
 }
 .cart img {
-  width: 100px;
+  width: 50px;
   margin: 0 5px;
 }

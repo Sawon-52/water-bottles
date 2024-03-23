@@ -24,9 +24,7 @@ export const Bottles = () => {
   return (
     <div className="Bottls">
       <h1>Awosome Bottles Are Available </h1>
-
       <Cart cart={cart}></Cart>
-
       <div></div>
       <div className="container">
         {bottles.map((bottle) => (
