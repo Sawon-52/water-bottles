@@ -23,14 +23,22 @@ export const Bottles = () => {
     addToLS(bottle.id);
   }
 
-
   useEffect(() => {
     if (bottles.length > 0) {
       const storedCart = getLocalStorage();
-      console.log(storedCart);
+
+      const saveCart = [];
+      for (const id of storedCart) {
+        const bottle = bottles.find((bottle) => bottle.id === id);
+        if (bottle) {
+          saveCart.push(bottle);
+        }
+      }
+      setCart(saveCart);
+      console.log(saveCart);
     }
   }, [bottles]);
-  
+
   return (
     <div className="Bottls">
       <h1>Awosome Bottles Are Available </h1>
